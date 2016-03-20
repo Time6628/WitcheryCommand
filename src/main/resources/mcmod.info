@@ -1,0 +1,17 @@
+[
+{
+  "modid": "witcheryLevel",
+  "name": "Witchery Level",
+  "description": "Set Player's Witchery levels.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["TimeTheCat"],
+  "credits": "",
+  "website": "http://kookykraftmc.com",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": ["Witchery"]
+}
+]
