@@ -2,8 +2,6 @@ package com.kookykraftmc.witcherycmd;
 
 import com.emoniph.witchery.common.ExtendedPlayer;
 import com.mojang.authlib.GameProfile;
-import cpw.mods.fml.common.FMLCommonHandler;
-import net.minecraft.client.Minecraft;
 import net.minecraft.command.ICommand;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayer;
@@ -30,7 +28,8 @@ public class WCmd implements ICommand {
     public WCmd() {
         aliases = new ArrayList();
         aliases.add("wcmd");
-
+        aliases.add("witcherycmd");
+        aliases.add("witcherycommand");
     }
 
     @Override
@@ -51,7 +50,7 @@ public class WCmd implements ICommand {
     @Override
     public void processCommand(ICommandSender sender, String[] args) {
         if (sender instanceof EntityPlayer) {
-            if (canCommandSenderUseCommand(sender) == true) {
+            if (canCommandSenderUseCommand(sender)) {
                 if (args.length < 2) {
                     sender.addChatMessage(new ChatComponentText(getCommandUsage(sender)));
                 } else if (args.length == 2) {
@@ -89,7 +88,7 @@ public class WCmd implements ICommand {
     public boolean canCommandSenderUseCommand(ICommandSender sender) {
         EntityPlayerMP epm = (EntityPlayerMP) sender;
         GameProfile gp = epm.getGameProfile();
-        if (MinecraftServer.getServer().getConfigurationManager().func_152596_g(gp) == true) {
+        if (MinecraftServer.getServer().getConfigurationManager().func_152596_g(gp)) {
 
             return true;
         } else {
