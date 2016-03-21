@@ -73,7 +73,7 @@ public class WCmd implements ICommand {
                         p.addChatMessage(new ChatComponentText("Your vampire level has been set to " + args[1]));
                     } else if (args[0].toLowerCase().matches("(?iu).*werewolf.*")) {
                         ep.setWerewolfLevel(Integer.parseInt(args[1]));
-                        sender.addChatMessage(new ChatComponentText(args[3] + "'s werewolf level has been set to " + args[1]));
+                        sender.addChatMessage(new ChatComponentText(args[2] + "'s werewolf level has been set to " + args[1]));
                         p.addChatMessage(new ChatComponentText("Your vampire level has been set to " + args[1]));
                     }
                 }
