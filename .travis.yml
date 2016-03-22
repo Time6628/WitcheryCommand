@@ -5,3 +5,4 @@ language: java
   - chmod +x gradlew
  install: ./gradlew setupCIWorkspace -S
  script: ./gradlew build -S
+#
